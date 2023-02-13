@@ -110,7 +110,7 @@ function runTests() {
     'HEY JUDE'
   );
 
-  tests = [
+  const tests = [
     ['1', 'E'],
     ['101', 'I'],
     ['10001', 'EE'],
@@ -138,7 +138,7 @@ function runTests() {
     ['1110000000111', 'T T'],
   ];
 
-  for (test of tests) {
+  for (let test of tests) {
     assert.equals(decodeMorse(decodeBits(test[0])), test[1]);
   }
 }

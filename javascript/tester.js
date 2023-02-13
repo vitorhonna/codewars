@@ -5,26 +5,28 @@ const assert = {
     console.log(`Test    : ${testResult}`);
     console.log(`Expected: ${expectedResult}`);
     console.log('');
+    return 0;
   },
 
   testPassed() {
     console.log('TEST PASSED :)');
+    return 1;
   },
 
   equals(testResult, expectedResult) {
     if (testResult === expectedResult) {
-      this.testPassed();
+      return this.testPassed();
     } else if (typeof testResult == 'object' && typeof expectedResult == 'object') {
       const a = testResult.sort((a, b) => a - b).toString();
       const b = expectedResult.sort((a, b) => a - b).toString();
 
       if (a === b) {
-        this.testPassed();
+        return this.testPassed();
       } else {
-        this.testFailed(testResult, expectedResult);
+        return this.testFailed(testResult, expectedResult);
       }
     } else {
-      this.testFailed(testResult, expectedResult);
+      return this.testFailed(testResult, expectedResult);
     }
   },
 };

@@ -33,11 +33,11 @@ function determinant(m) {
 runTests();
 
 function runTests() {
-  m1 = [
+  const m1 = [
     [4, 6],
     [3, 8],
   ];
-  m5 = [
+  const m5 = [
     [2, 4, 2],
     [3, 1, 1],
     [1, 2, 0],
