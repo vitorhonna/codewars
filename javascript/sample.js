@@ -2,12 +2,8 @@ const assert = require('./tester.js');
 
 // ------------------------ CODE ------------------------
 
-
-
 //  ----------------------- TESTS -----------------------
 
-// runTests();
+runTests();
 
-function runTests() {
-
-}
+function runTests() {}
