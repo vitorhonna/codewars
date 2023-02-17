@@ -29,6 +29,10 @@ const assert = {
       return this.testFailed(testResult, expectedResult);
     }
   },
+
+  deepEquals(testResult, expectedResult) {
+    return expectedResult.every((_, i) => expectedResult[i] == testResult[i]) ? this.testPassed() : this.testFailed(testResult, expectedResult);
+  },
 };
 
 module.exports = assert;
